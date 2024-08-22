@@ -12,13 +12,15 @@ Arduino IDE は Arduino AVR Boards は最新(2024.7現在)の 1.8.6で動作確�
 
 # 使用方法
 - **`NSControlLibrary`** [https://github.com/Kumataku-JP/NSControlLibrary.git](url) を /document/Arduino フォルダ内にある libraries フォルダに入れてください。
-- KeyRegistrationスケッチを sketch フォルダに入れてください。
+- KeyRegistration フォルダを sketch フォルダに入れてください。
 - Arduino Leonardoに書き込み
+- Arduino Leonardo に LCD KeyPad Shieldを接続
 - ReaSnow S1に接続
 - ReaSnowのスマートフォンアプリを開きキー配置編集
 
 ## 操作方法
 - selectボタンでモード変更でき、各ボタンが4つずつM1〜M7に割り振られています。
+- LCD KeyPad Shieldに各項目が表示されます。ReaSnowアプリのキー配置編集で任意のボタンを割り当ててください。
 
 	| SELECTボタン|   				| UPボタン  | DOWNボタン  | LEFTボタン  | RIGHTボタン  |
 	|:-----------|:----------|:----------|:----------|:----------|:----------|
