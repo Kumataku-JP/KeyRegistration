@@ -1,5 +1,5 @@
 /*  ReaSnowS1にArduinoコントローラーを登録するためのプログラム
- *  
+ *  v1.0.1
  *  
  */
 
@@ -183,11 +183,11 @@ void screenDisplay() {
         lcd.print("L(1)");
         lcd.setCursor(8, 1);
         lcd.write(byte(5));  // down 5
-        lcd.print("RZ(2)");
+        lcd.print("ZR(R2)");
       } else {
         lcd.setCursor(0, 1);
         lcd.write(byte(6));  // left 6
-        lcd.print("LZ(2)");
+        lcd.print("ZL(L2)");
         lcd.setCursor(8, 1);
         lcd.write(byte(7));  // right 7
         lcd.print("R(1)");
