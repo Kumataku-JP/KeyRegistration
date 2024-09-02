@@ -55,7 +55,7 @@ Arduino IDE は Arduino AVR Boards は最新(2024.7現在)の 1.8.6で動作確�
 
 ## 修正履歴
 - README説明追記
-- v1.0.1  M3.サイドボタンのLCD表示誤植修正
+- v1.0.1  sketch修正 M3.サイドボタンのLCD表示誤植修正
 
 
 # license 
