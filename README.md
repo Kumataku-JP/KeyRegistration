@@ -28,14 +28,34 @@ Arduino IDE は Arduino AVR Boards は最新(2024.7現在)の 1.8.6で動作確�
 	|M2 			 | R アナログスティック    | 前    | 後ろ    | 左    | 右    |
 	|M3			 | サイドボタン			    | L (L1) | ZR (R2) | ZL (L2) | R (R1)    |
 	|M4			 | 十字ボタン    		| 上    | 下    | 左    | 右    |
-	|M5			 | セレクトボタン    | タッチパッド | PSボタン | クリエイト  | オプション  |
+	|M5			 | セレクトボタン    | タッチパッド※ | PSボタン | クリエイト※  | オプション  |
 	|M6			 | アクションボタン    | △    | ×    | □    | ○    |
 	|M7			 | スティックボタン    |     |     | L3    | R3    |
+- ※：SwitchのコントローラーとDualSenseのコントローラーでは、マイナスボタンとキャプチャーボタンの配列がタッチパッドとクリエイティブボタンが逆になります。
+	- ○×の決定キャンセルボタンが逆の仕様に合わせて、マクロスケッチで対応したコードを適応させることをおすすめします。  consoleType = 0がSwitch、 = 1がPS5仕様
+	
+	```
+	// Nintendo Switchは"0"、PlayStation 5は"1"
+	bool consoleType = 1; 
+	unsigned char confirmButton;
+	unsigned char cancelButton;
+	unsigned int minusButton;
+	unsigned int captureButton;
+	
+	void setup() {
+	/* 決定ボタン */
+  	confirmButton = (consoleType == 0) ? Button::A : Button::B;  // Switch
+  	cancelButton = (consoleType == 0) ? Button::B : Button::A;   // PS5
+  	/* CREATEボタン・タッチパッド／マイナスボタン・キャプチャーボタン */
+  	minusButton = (consoleType == 0) ? Button::MINUS : Button::CAPTURE;    // Switch
+  	captureButton = (consoleType == 0) ? Button::CAPTURE : Button::MINUS;  // PS5
+	}
+	```
 
 
 ## 修正履歴
-- v1.0.1
-	- M3.サイドボタンのLCD表示誤植修正
+- README説明追記
+- v1.0.1  M3.サイドボタンのLCD表示誤植修正
 
 
 # license 
