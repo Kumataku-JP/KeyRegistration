@@ -4,14 +4,14 @@ Arduino Leonardoに接続したLCD KeyPad Shieldのボタンを使って、ReaSn
 # 動作環境
 動作環境は下記の通りです。
 - Arduino Leonardo
-- LCD KeyPad Shield	[https://amzn.to/3AsXnla](url)
+- [LCD KeyPad Shield](https://amzn.to/3AsXnla)
 - Arduino IDE（2.3.2）
 - Arduino AVR Boards（1.8.6）
 
 Arduino IDE は Arduino AVR Boards は最新(2024.7現在)の 1.8.6で動作確認しております。
 
 # 使用方法
-- **`NSControlLibrary`** [https://github.com/Kumataku-JP/NSControlLibrary.git](url) を /document/Arduino フォルダ内にある libraries フォルダに入れてください。
+- **`NSControlLibrary`** [NSControlLibrary](https://github.com/Kumataku-JP/NSControlLibrary.git) を /document/Arduino フォルダ内にある libraries フォルダに入れてください。
 - KeyRegistration フォルダを sketch フォルダに入れてください。
 - Arduino Leonardoに書き込み
 - Arduino Leonardo に LCD KeyPad Shieldを接続
