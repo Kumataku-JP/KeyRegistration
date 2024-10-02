@@ -219,14 +219,14 @@ void screenDisplay() {
         lcd.print("TOUCHPAD-");
         lcd.setCursor(12, 1);
         lcd.write(byte(5));  // down 5
-        lcd.print("PS+");
+        lcd.print("PS");
       } else {
         lcd.setCursor(0, 1);
         lcd.write(byte(6));  // left 6
         lcd.print("CREATE");
-        lcd.setCursor(9, 1);
+        lcd.setCursor(8, 1);
         lcd.write(byte(7));  // right 7
-        lcd.print("OPTION");
+        lcd.print("OPTION+");
       }
       break;
     case 6:
